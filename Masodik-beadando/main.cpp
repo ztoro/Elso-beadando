@@ -99,9 +99,7 @@ int main()
         {
              prevKilepes.clear();
         }
-
-
-        //cout << en.current().getKilepes() << endl;
+        
         if (en.current().getKilepes().empty() == false && en.current().getBelepes() > en.current().getKilepes())
         {
             hiba++;
