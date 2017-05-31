@@ -1,4 +1,5 @@
 Feladat:
+
 Egy vállalat portaszolgálatán feljegyzik a belépő és kilépő személyek
 adatait. Belépéskor rögzítik az aktuális időpontot, a belépő nevét és
 azonosítására szolgáló igazolványszámot, távozáskor pedig a fenti három
