@@ -1,0 +1,7 @@
+10:30 Gipsz_Jakab 1234567A 10:15
+10:10 Gipsz_Jakab 1234567A 11:30
+08:35 Gyanus_Moric 1x1x1x1x1x
+08:35 Gyanus_Moric 1x1x1x1x1x 08:10
+08:05 Gyanus_Moric 1x1x1x1x1x 08:20
+08:25 Szer_Elek 33332222 09:15
+10:25 Szer_Elek 33332222
