@@ -8,13 +8,21 @@ azon belül belépési idő szerint növekvően rendezve egy szöveges
 három vagy négy olyan sztringet találunk, amelyeknek belsejében nincs
 elválasztó jel, ugyanakkor tetszőleges számú elválasztó jel határolja
 azokat.
+
 Például az input fájl adatai:
+
 10:30 Gipsz_Jakab 1234567A 10:15
+
 10:45 Gipsz_Jakab 1234567A 11:30
+
 08:35 Gyanús_Móric 1x1x1x1x1x
+
 08:35 Gyanús_Móric 1x1x1x1x1x 08:10
+
 08:35 Gyanús_Móric 1x1x1x1x1x
+
 08:45 Szer_Elek 33332222 09:15
+
 Ebben állományban akkor tekinthető egy sor korrektnek, ha egyrészt olyan
 kilépési időpont szerepel benne, amely későbbi, mint a belépés időpontja 
 (ezeket sztring összehasonlítással ellenőrizheti), másrészt, amennyiben a
