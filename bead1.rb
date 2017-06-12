@@ -21,32 +21,55 @@ end
 =end
 
 
+fValue = Array.new
+index=1
 inFile.each do |line|
   temp = line.split(",")
   f = temp[0]
   operator = temp[1].strip
   numbers = temp[2][10..-1]
-  numbers.split(" ").join.to_i
-  numberBox = numbers.split(" ").to_i
-  puts numberBox
+  numberBox = numbers.split(" ")
+
   if operator == "sum"
     sum = 0
     numberBox.each do |number|
-      sum = sum + number
+      i=1
+      while i <= index do
+        if number[0].eql?("f")
+          fSzam=number[1..-1].to_i
+          number = fValue[fSzam].to_i      
+        end
+        i=i+1
+      end
+      sum = sum + number.to_i
     end
     outFile.write f
+    fValue[index]=sum
+    index=index+1
     outFile.write " = "
     outFile.write sum
     outFile.write "\n"
   end
+  
+
   if operator == "max"
     max = 0
     numberBox.each do |number|
-      if number > max
-        max = number
+      i=1
+      while i <= index do
+        if number[0].eql?("f")
+          fSzam=number[1..-1].to_i
+          number = fValue[fSzam]
+        end
+        i=i+1
+      end
+      if number.to_i > max
+        max = number.to_i
       end
     end
     outFile.write f
+    fValue[index]=max
+    index=index+1
     outFile.write " = "
     outFile.write max
     outFile.write "\n"
@@ -54,9 +77,19 @@ inFile.each do |line|
   if operator == "prod"
     prod = 1
     numberBox.each do |number|
-      prod = prod * number
+      i=1
+      while i <= index do
+        if number[0].eql?("f")
+          fSzam=number[1..-1].to_i
+          number = fValue[fSzam]
+        end
+        i=i+1
+      end
+      prod = prod * number.to_i
     end
     outFile.write f
+    fValue[index]=prod
+    index=index+1
     outFile.write " = "
     outFile.write prod
     outFile.write "\n"
