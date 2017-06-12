@@ -32,7 +32,10 @@ inFile.each do |line|
     numberBox.each do |number|
       sum = sum + number
     end
-    puts sum
+    outFile.write f
+    outFile.write " = "
+    outFile.write sum
+    outFile.write "/n"
   end
   if operator == "max"
     max = 0
@@ -41,14 +44,20 @@ inFile.each do |line|
         max = number
       end
     end
-    puts max
+    outFile.write f
+    outFile.write " = "
+    outFile.write max
+    outFile.write "/n"
   end
   if operator == "prod"
     prod = 1
     numberBox.each do |number|
       prod = prod * number
     end
-    puts prod
+    outFile.write f
+    outFile.write " = "
+    outFile.write prod
+    outFile.write "/n"
   end
 end
   
