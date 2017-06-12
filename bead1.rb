@@ -12,15 +12,6 @@ rescue Errno::ENOENT
 end
 
 outFile = open("eredmeny.txt", 'w')
-
-  
-=begin
-inFile.each do |line|
-  outFile.puts line
-end
-=end
-
-
 fValue = Array.new
 index=1
 inFile.each do |line|
