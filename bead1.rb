@@ -26,14 +26,29 @@ inFile.each do |line|
   f = temp[0]
   operator = temp[1].strip
   numbers = temp[2][10..-1]
+  numberBox = numbers.split(" ").join.to_i
   if operator == "sum"
     sum = 0
-    puts sum
-    numberBox = numbers.split(" ").join.to_i
     numberBox.each do |number|
       sum = sum + number
     end
-   
+    puts sum
   end
+  if operator == "max"
+    max = 0
+    numberBox.each do |number|
+      if number > max
+        max = number
+      end
+    end
+    puts max
+  end
+  if operator == "prod"
+    prod = 1
+    numberBox.each do |number|
+      prod = prod * number
+    end
+    puts prod
+  end
+end
   
-                 
