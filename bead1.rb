@@ -20,31 +20,20 @@ inFile.each do |line|
 end
 =end
 
-class Data
-  def initalize(f,op,num)
-    @f, @operation, @numbers = f, op, num
-  end
-
-  def getF
-    @f
-  end
-
-  def getNumbers
-    @numbers
-  end
-
-  def getOperation
-    @operation
-  end
-end
 
 inFile.each do |line|
   temp = line.split(",")
-  puts temp
-#=begin
-  data = Data.new(temp)
-  y = data.getOperation()
-  puts y
-#=end
-end
+  f = temp[0]
+  operator = temp[1].strip
+  numbers = temp[2][10..-1]
+  if operator == "sum"
+    sum = 0
+    puts sum
+    numberBox = numbers.split(" ").join.to_i
+    numberBox.each do |number|
+      sum = sum + number
+    end
+   
+  end
+  
                  
