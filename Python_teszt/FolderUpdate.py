@@ -56,7 +56,7 @@ def main():
 	exceptions = exceptionfile.read()
 
 	log = open('log.txt','a')
-	print exceptions
+
 	for imaginaryFile, sourceFile in zip(getImaginaryList(), getSourceList()):
 		if imaginaryFile not in getDestinationList() and imaginaryFile not in exceptions:
 			try:
