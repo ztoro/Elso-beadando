@@ -58,7 +58,7 @@ def main():
 	log = open('log.txt','a')
 	print exceptions
 	for imaginaryFile, sourceFile in zip(getImaginaryList(), getSourceList()):
-		if imaginaryFile not in getDestinationList() and imaginaryFile not in exceptionfile:
+		if imaginaryFile not in getDestinationList() and imaginaryFile not in exceptions:
 			try:
 				makeFolderPath(getFolderPath(imaginaryFile))
 				shutil.copyfile(sourceFile,imaginaryFile)
