@@ -1,4 +1,4 @@
 
-public class Hexagon {
+public class Hexagon extends Figure {
 
 }
