@@ -1,8 +1,7 @@
 
 public class Figure {
 	
-	public String name;
-	public Type type;
+	public int index;
 	public Coordinate centre;
 	public double length;
 	
