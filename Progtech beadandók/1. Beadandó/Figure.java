@@ -1,7 +1,8 @@
 
 public class Figure {
 	
-	public int index;
+	public int rowNumber;
+	public String type;
 	public Coordinate centre;
 	public double length;
 	
