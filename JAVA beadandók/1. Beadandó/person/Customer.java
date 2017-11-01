@@ -17,7 +17,7 @@ public class Customer {
 		this.amount = 0;
 	}
 	
-	public Customer makeCustomer(String name, int birthYear, String bankName) {
+	public static Customer makeCustomer(String name, int birthYear, String bankName) {
 		
 		Bank bank;
 		if (Main.failBirthYear(birthYear) || Main.failBankName(bankName) || Main.failName(name)) {
@@ -30,7 +30,7 @@ public class Customer {
 	}
 	
 	public String getName() {
-		return this.name;
+		return name;
 	}
 	
 	public Bank getBank() {
@@ -49,6 +49,7 @@ public class Customer {
 		amount = amount + value;
 	}
 	
+	@Override
 	public String toString() {
 		String string;
 		string = getName() + ": " + Integer.toString(getAmount());

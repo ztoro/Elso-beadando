@@ -15,7 +15,7 @@ public class ATM {
 		this.amount = amount;
 	}
 	
-	public ATM makeATM(String bankName,int amount) {
+	public static ATM makeATM(String bankName,int amount) {
 		if (0 > amount || Main.failBankName(bankName)) {
 			return null;
 		} else {
@@ -38,6 +38,12 @@ public class ATM {
 	}
 	
 	public int calculateFee(Bank bank, int value) {
-		
+		int fee;
+		if (bank == this.bank) {
+			fee = Math.max((int) Math.ceil((double) value * 0.01), 200);
+		} else {
+			fee = Math.max((int) Math.ceil((double) value * 0.03), 500);
+		}
+		return fee;
 	}
 }
