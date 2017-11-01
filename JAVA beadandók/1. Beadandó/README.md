@@ -1,176 +1,177 @@
-A feladat összefoglaló leírása
-Ebben a feladatban egy bankrendszer leegyszerûsített mûködését fogjuk szimulálni. A szimulációban szerepelnek bankok és személyek és egy bankjegykiadó automata, amibõl az emberek pénzt tudnak felvenni, vagy pénzt tudnak betenni oda.
+A feladat Ã¶sszefoglalÃ³ leÃ­rÃ¡sa
 
-A részfeladatok megoldása során ügyeljünk arra, hogy a megadottakon kívül egyetlen osztály se tartalmazzon más publikus metódust vagy adattagot, illetve egyik csomag se tartalmazzon más osztályokat! Ha az implementáció megköveteli, akkor az osztályok rejtett adattagokkal és metódusokkal szabadon bõvíthetõk. A megoldást egyetlen .zip állományként kell feltölteni, amely tartalmazza a csomagnak megfelelõ könyvtárszerkezetben az összes forráskódot. A fordítás során keletkezõ .class állományokat viszont már nem szabad mellékelni! A fordításhoz legalább a Java Standard Edition 8 használata kötelezõ.
+Ebben a feladatban egy bankrendszer leegyszerÅ±sÃ­tett mÅ±kÃ¶dÃ©sÃ©t fogjuk szimulÃ¡lni. A szimulÃ¡ciÃ³ban szerepelnek bankok Ã©s szemÃ©lyek Ã©s egy bankjegykiadÃ³ automata, amibÅ‘l az emberek pÃ©nzt tudnak felvenni, vagy pÃ©nzt tudnak betenni oda.
 
-A feladathoz tartozik egy letölthetõ segédlet, ahol találunk egy minta bemeneti fájlt és egy ahhoz tartozó kimeneti fájlt, továbbá egyéb segítséget a teszteléshez.
+A rÃ©szfeladatok megoldÃ¡sa sorÃ¡n Ã¼gyeljÃ¼nk arra, hogy a megadottakon kÃ­vÃ¼l egyetlen osztÃ¡ly se tartalmazzon mÃ¡s publikus metÃ³dust vagy adattagot, illetve egyik csomag se tartalmazzon mÃ¡s osztÃ¡lyokat! Ha az implementÃ¡ciÃ³ megkÃ¶veteli, akkor az osztÃ¡lyok rejtett adattagokkal Ã©s metÃ³dusokkal szabadon bÅ‘vÃ­thetÅ‘k. A megoldÃ¡st egyetlen .zip Ã¡llomÃ¡nykÃ©nt kell feltÃ¶lteni, amely tartalmazza a csomagnak megfelelÅ‘ kÃ¶nyvtÃ¡rszerkezetben az Ã¶sszes forrÃ¡skÃ³dot. A fordÃ­tÃ¡s sorÃ¡n keletkezÅ‘ .class Ã¡llomÃ¡nyokat viszont mÃ¡r nem szabad mellÃ©kelni! A fordÃ­tÃ¡shoz legalÃ¡bb a Java Standard Edition 8 hasznÃ¡lata kÃ¶telezÅ‘.
 
-A feladat megoldása során be kell tartani a kódolási konvenciókat.
-A kódolási konvenciók közül külön kiemelendõ, hogy ha valamilyen feladat vagy ellenõrzés elvégzésére valamelyik osztály már tartalmaz megfelelõ metódust, akkor azt kell használni, nem pedig újra leprogramozni (vagy átmásolni) az adott részt. (Bizonyos helyeken ezt a feladat külön ki is emeli, de erre külön figyelmeztetés nélkül is ügyelni kell.)
+A feladathoz tartozik egy letÃ¶lthetÅ‘ segÃ©dlet, ahol talÃ¡lunk egy minta bemeneti fÃ¡jlt Ã©s egy ahhoz tartozÃ³ kimeneti fÃ¡jlt, tovÃ¡bbÃ¡ egyÃ©b segÃ­tsÃ©get a tesztelÃ©shez.
 
-A feladat részletes ismertetése
+A feladat megoldÃ¡sa sorÃ¡n be kell tartani a kÃ³dolÃ¡si konvenciÃ³kat.
+A kÃ³dolÃ¡si konvenciÃ³k kÃ¶zÃ¼l kÃ¼lÃ¶n kiemelendÅ‘, hogy ha valamilyen feladat vagy ellenÅ‘rzÃ©s elvÃ©gzÃ©sÃ©re valamelyik osztÃ¡ly mÃ¡r tartalmaz megfelelÅ‘ metÃ³dust, akkor azt kell hasznÃ¡lni, nem pedig Ãºjra leprogramozni (vagy Ã¡tmÃ¡solni) az adott rÃ©szt. (Bizonyos helyeken ezt a feladat kÃ¼lÃ¶n ki is emeli, de erre kÃ¼lÃ¶n figyelmeztetÃ©s nÃ©lkÃ¼l is Ã¼gyelni kell.)
+
+A feladat rÃ©szletes ismertetÃ©se
 financial.bank.Bank
-Hozzuk létre a financial.bank csomagban a Bank osztályt, ami egy felsorolási típus, az egyes bankok rövidített neveit tartalmazza.
+Hozzuk lÃ©tre a financial.bank csomagban a Bank osztÃ¡lyt, ami egy felsorolÃ¡si tÃ­pus, az egyes bankok rÃ¶vidÃ­tett neveit tartalmazza.
 
-Az osztály lehetséges értékei legyenek a következõk: BB, OTP, Erste, CIB, Raiffeisen, Citibank, FHB, MKB és UniCredit.
+Az osztÃ¡ly lehetsÃ©ges Ã©rtÃ©kei legyenek a kÃ¶vetkezÅ‘k: BB, OTP, Erste, CIB, Raiffeisen, Citibank, FHB, MKB Ã©s UniCredit.
 
 financial.person.Customer
-Hozzuk létre a financial.person csomagban a Customer osztályt, ami egy folyószámlával rendelkezõ személyt valósít meg. A feladatban egy embernek pontosan egy banknál van folyószámlája.
+Hozzuk lÃ©tre a financial.person csomagban a Customer osztÃ¡lyt, ami egy folyÃ³szÃ¡mlÃ¡val rendelkezÅ‘ szemÃ©lyt valÃ³sÃ­t meg. A feladatban egy embernek pontosan egy banknÃ¡l van folyÃ³szÃ¡mlÃ¡ja.
 
-Az osztálynak legyen négy rejtett adattagja:
+Az osztÃ¡lynak legyen nÃ©gy rejtett adattagja:
 
-name: szöveges típusú, a személy nevét tárolja
+name: szÃ¶veges tÃ­pusÃº, a szemÃ©ly nevÃ©t tÃ¡rolja
 
-birthYear: egész szám, a személy születési éve
+birthYear: egÃ©sz szÃ¡m, a szemÃ©ly szÃ¼letÃ©si Ã©ve
 
-bank: Bank típusú, azt tárolja, hogy melyik banknál van a személy (egyetlen) folyószámlája
+bank: Bank tÃ­pusÃº, azt tÃ¡rolja, hogy melyik banknÃ¡l van a szemÃ©ly (egyetlen) folyÃ³szÃ¡mlÃ¡ja
 
-amount: egész szám, a személy aktuális egyenlege a folyószámláján
+amount: egÃ©sz szÃ¡m, a szemÃ©ly aktuÃ¡lis egyenlege a folyÃ³szÃ¡mlÃ¡jÃ¡n
 
-Készítsük el a következõ metódusokat:
+KÃ©szÃ­tsÃ¼k el a kÃ¶vetkezÅ‘ metÃ³dusokat:
 
-Az osztálynak legyen egy rejtett konstruktora: Customer(String name, int birthYear, Bank bank), amely ellenõrzés nélkül beállítja az adattagokat a megadott értékekre, a kezdeti egyenleg legyen 0.
+Az osztÃ¡lynak legyen egy rejtett konstruktora: Customer(String name, int birthYear, Bank bank), amely ellenÅ‘rzÃ©s nÃ©lkÃ¼l beÃ¡llÃ­tja az adattagokat a megadott Ã©rtÃ©kekre, a kezdeti egyenleg legyen 0.
 
-Legyen egy publikus osztályszintû Customer visszatérési értékû metódus: makeCustomer(String name, int birthYear, String bankName), ami ellenõrzi a paramétereket, és ha azok megfelelõek, akkor létrehozza a paramétereknek megfelelõ Customer objektumot és visszaadja. Ha a paraméterek nem megfelelõek, akkor a metódus adjon vissza null referenciát. A metódusnak ellenõrzéskor a következõket kell megvizsgálnia:
+Legyen egy publikus osztÃ¡lyszintÅ± Customer visszatÃ©rÃ©si Ã©rtÃ©kÅ± metÃ³dus: makeCustomer(String name, int birthYear, String bankName), ami ellenÅ‘rzi a paramÃ©tereket, Ã©s ha azok megfelelÅ‘ek, akkor lÃ©trehozza a paramÃ©tereknek megfelelÅ‘ Customer objektumot Ã©s visszaadja. Ha a paramÃ©terek nem megfelelÅ‘ek, akkor a metÃ³dus adjon vissza null referenciÃ¡t. A metÃ³dusnak ellenÅ‘rzÃ©skor a kÃ¶vetkezÅ‘ket kell megvizsgÃ¡lnia:
 
-A név csak az angol abc betûibõl és szóközbõl állhat. A név egyes részeit (vezetéknevek, keresztnevek) pontosan egy szóköz választja el egymástól. A név legalább 2, legfeljebb 4 részbõl áll, melyben minden rész legalább három karakter hosszú, nagybetûvel kezdõdik, utána viszont csak kisbetûbõl állhat.
-(segítség: használhatod a String osztály split és charAt metódusát, illetve a Character osztály isUpperCase és isLowerCase metódusát)
+A nÃ©v csak az angol abc betÅ±ibÅ‘l Ã©s szÃ³kÃ¶zbÅ‘l Ã¡llhat. A nÃ©v egyes rÃ©szeit (vezetÃ©knevek, keresztnevek) pontosan egy szÃ³kÃ¶z vÃ¡lasztja el egymÃ¡stÃ³l. A nÃ©v legalÃ¡bb 2, legfeljebb 4 rÃ©szbÅ‘l Ã¡ll, melyben minden rÃ©sz legalÃ¡bb hÃ¡rom karakter hosszÃº, nagybetÅ±vel kezdÅ‘dik, utÃ¡na viszont csak kisbetÅ±bÅ‘l Ã¡llhat.
+(segÃ­tsÃ©g: hasznÃ¡lhatod a String osztÃ¡ly split Ã©s charAt metÃ³dusÃ¡t, illetve a Character osztÃ¡ly isUpperCase Ã©s isLowerCase metÃ³dusÃ¡t)
 
-A születési évnek 1918 és 1998 közöttinek kell lennie (az 1918 és az 1998 értéket is felveheti).
+A szÃ¼letÃ©si Ã©vnek 1918 Ã©s 1998 kÃ¶zÃ¶ttinek kell lennie (az 1918 Ã©s az 1998 Ã©rtÃ©ket is felveheti).
 
-A bankName-nek a Bank típus egyik lehetséges értékével kell egyeznie.
-(segítség: szöveges típusból egy adott felsorolási típusba tartozó objektummá konvertáláshoz használhatod az adott felsorolási típus ("automatikusan" létezõ) osztályszintû valueOf metódusát, amely IllegalArgumentException kivételt dob, ha a szöveg nem egyezik meg a felsorolási típus egyetlen lehetséges értékével sem)
+A bankName-nek a Bank tÃ­pus egyik lehetsÃ©ges Ã©rtÃ©kÃ©vel kell egyeznie.
+(segÃ­tsÃ©g: szÃ¶veges tÃ­pusbÃ³l egy adott felsorolÃ¡si tÃ­pusba tartozÃ³ objektummÃ¡ konvertÃ¡lÃ¡shoz hasznÃ¡lhatod az adott felsorolÃ¡si tÃ­pus ("automatikusan" lÃ©tezÅ‘) osztÃ¡lyszintÅ± valueOf metÃ³dusÃ¡t, amely IllegalArgumentException kivÃ©telt dob, ha a szÃ¶veg nem egyezik meg a felsorolÃ¡si tÃ­pus egyetlen lehetsÃ©ges Ã©rtÃ©kÃ©vel sem)
 
-Az osztály tartalmazza a következõ publikus "getter" metódusokat: getName, getBank, getAmount, amelyek visszaadják az adott értékeket
+Az osztÃ¡ly tartalmazza a kÃ¶vetkezÅ‘ publikus "getter" metÃ³dusokat: getName, getBank, getAmount, amelyek visszaadjÃ¡k az adott Ã©rtÃ©keket
 
-Legyen egy publikus void visszatérési értékû, egész paraméterû decreaseAmount metódus, amely az adott értékkel csökkenti az egyenleget. Semmiféle ellenõrzést nem kell végezni.
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ±, egÃ©sz paramÃ©terÅ± decreaseAmount metÃ³dus, amely az adott Ã©rtÃ©kkel csÃ¶kkenti az egyenleget. SemmifÃ©le ellenÅ‘rzÃ©st nem kell vÃ©gezni.
 
-Legyen egy publikus void visszatérési értékû, egész paraméterû increaseAmount metódus, amely az adott értékkel növeli az egyenleget.
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ±, egÃ©sz paramÃ©terÅ± increaseAmount metÃ³dus, amely az adott Ã©rtÃ©kkel nÃ¶veli az egyenleget.
 
-Legyen egy publikus szöveges visszatérési értékû, paraméter nélküli toString metódus, ami a következõ formában adja vissza a személy szöveges reprezentációját: Név: egyenleg
+Legyen egy publikus szÃ¶veges visszatÃ©rÃ©si Ã©rtÃ©kÅ±, paramÃ©ter nÃ©lkÃ¼li toString metÃ³dus, ami a kÃ¶vetkezÅ‘ formÃ¡ban adja vissza a szemÃ©ly szÃ¶veges reprezentÃ¡ciÃ³jÃ¡t: NÃ©v: egyenleg
 
 financial.bank.ATM
-Hozzuk létre a financial.bank csomagban az ATM osztályt, ami egy pénzkiadó automatát valósít meg.
+Hozzuk lÃ©tre a financial.bank csomagban az ATM osztÃ¡lyt, ami egy pÃ©nzkiadÃ³ automatÃ¡t valÃ³sÃ­t meg.
 
-Az osztálynak legyen két rejtett adattagja:
+Az osztÃ¡lynak legyen kÃ©t rejtett adattagja:
 
-bank: Bank típusú érték, azt tárolja, hogy melyik bankhoz tartozik az automata (az automatából más bank ügyfelei is kivehetnek pénzt, csak õk magasabb költséggel)
+bank: Bank tÃ­pusÃº Ã©rtÃ©k, azt tÃ¡rolja, hogy melyik bankhoz tartozik az automata (az automatÃ¡bÃ³l mÃ¡s bank Ã¼gyfelei is kivehetnek pÃ©nzt, csak Å‘k magasabb kÃ¶ltsÃ©ggel)
 
-amount: egész típusú érték, azt tárolja, hogy aktuálisan mennyi pénz van az automatában
+amount: egÃ©sz tÃ­pusÃº Ã©rtÃ©k, azt tÃ¡rolja, hogy aktuÃ¡lisan mennyi pÃ©nz van az automatÃ¡ban
 
-Készítsük el a következõ metódusokat:
+KÃ©szÃ­tsÃ¼k el a kÃ¶vetkezÅ‘ metÃ³dusokat:
 
-Az osztálynak legyen egy rejtett konstruktora: ATM(Bank bank, int amount), amely a megadott adatokkal - ellenõrzés nélkül - létrehozza az objektumot.
+Az osztÃ¡lynak legyen egy rejtett konstruktora: ATM(Bank bank, int amount), amely a megadott adatokkal - ellenÅ‘rzÃ©s nÃ©lkÃ¼l - lÃ©trehozza az objektumot.
 
-Legyen egy publikus osztályszintû, ATM visszatérési értékû metódus: makeATM(String bankName, int amount), ami ellenõrzi a paramétereket, és amennyiben azok megfelelõek, akkor létrehozza és visszaadja az ATM objektumot. Ha a paraméterek nem megfelelõek, akkor a metódus adjon vissza null referenciát. Az ellenõrzéskor a következõket kell megvizsgálni:
+Legyen egy publikus osztÃ¡lyszintÅ±, ATM visszatÃ©rÃ©si Ã©rtÃ©kÅ± metÃ³dus: makeATM(String bankName, int amount), ami ellenÅ‘rzi a paramÃ©tereket, Ã©s amennyiben azok megfelelÅ‘ek, akkor lÃ©trehozza Ã©s visszaadja az ATM objektumot. Ha a paramÃ©terek nem megfelelÅ‘ek, akkor a metÃ³dus adjon vissza null referenciÃ¡t. Az ellenÅ‘rzÃ©skor a kÃ¶vetkezÅ‘ket kell megvizsgÃ¡lni:
 
-A bankName-nek a Bank típus egyik lehetséges értékével kell egyeznie.
+A bankName-nek a Bank tÃ­pus egyik lehetsÃ©ges Ã©rtÃ©kÃ©vel kell egyeznie.
 
-Az egyenlegnek pozitívnak kell lennie.
+Az egyenlegnek pozitÃ­vnak kell lennie.
 
-Legyen egy publikus egész visszatérési értékû, paraméter nélküli getAmount metódus, amely visszaadja az automatában lévõ pénz mennyiségét.
+Legyen egy publikus egÃ©sz visszatÃ©rÃ©si Ã©rtÃ©kÅ±, paramÃ©ter nÃ©lkÃ¼li getAmount metÃ³dus, amely visszaadja az automatÃ¡ban lÃ©vÅ‘ pÃ©nz mennyisÃ©gÃ©t.
 
-Legyen egy publikus void visszatérési értékû, egész paraméterû decreaseAmount metódus, amely az adott értékkel csökkenti az egyenleget (semmiféle ellenõrzést nem kell végezni).
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ±, egÃ©sz paramÃ©terÅ± decreaseAmount metÃ³dus, amely az adott Ã©rtÃ©kkel csÃ¶kkenti az egyenleget (semmifÃ©le ellenÅ‘rzÃ©st nem kell vÃ©gezni).
 
-Legyen egy publikus void visszatérési értékû, egész paraméterû increaseAmount metódus, az adott értékkel növeli az egyenleget.
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ±, egÃ©sz paramÃ©terÅ± increaseAmount metÃ³dus, az adott Ã©rtÃ©kkel nÃ¶veli az egyenleget.
 
-Legyen egy publikus egész visszatérési értékû calculateFee(Bank bank, int value) metódus, amely kiszámolja a pénzfelvételi díjat annak függvényében, hogy a felvevõ folyószámlája melyik banknál van (bank paraméter) és mekkora összeget szeretne felvenni (value paraméter). A díjat a következõképpen kell számolni:
+Legyen egy publikus egÃ©sz visszatÃ©rÃ©si Ã©rtÃ©kÅ± calculateFee(Bank bank, int value) metÃ³dus, amely kiszÃ¡molja a pÃ©nzfelvÃ©teli dÃ­jat annak fÃ¼ggvÃ©nyÃ©ben, hogy a felvevÅ‘ folyÃ³szÃ¡mlÃ¡ja melyik banknÃ¡l van (bank paramÃ©ter) Ã©s mekkora Ã¶sszeget szeretne felvenni (value paramÃ©ter). A dÃ­jat a kÃ¶vetkezÅ‘kÃ©ppen kell szÃ¡molni:
 
-ha az automata a pénzfelvevõ saját bankjának automatája, akkor a díj az összeg 1%-a (felfelé kerekítve), de legalább 200 Ft.
+ha az automata a pÃ©nzfelvevÅ‘ sajÃ¡t bankjÃ¡nak automatÃ¡ja, akkor a dÃ­j az Ã¶sszeg 1%-a (felfelÃ© kerekÃ­tve), de legalÃ¡bb 200 Ft.
 
-idegen bank esetén a díj az összeg 3%-a (felfelé kerekítve), de legalább 500 Ft.
+idegen bank esetÃ©n a dÃ­j az Ã¶sszeg 3%-a (felfelÃ© kerekÃ­tve), de legalÃ¡bb 500 Ft.
 
-(segítség: kerekítéshez használhatod a Math osztály ceil metódusát)
+(segÃ­tsÃ©g: kerekÃ­tÃ©shez hasznÃ¡lhatod a Math osztÃ¡ly ceil metÃ³dusÃ¡t)
 
 financial.Simulator
-Hozzuk létre a financial csomagban az Simulator osztályt, ami a bankvilág szimulációját végzi.
+Hozzuk lÃ©tre a financial csomagban az Simulator osztÃ¡lyt, ami a bankvilÃ¡g szimulÃ¡ciÃ³jÃ¡t vÃ©gzi.
 
-Az osztálynak legyen három rejtett adattagja:
+Az osztÃ¡lynak legyen hÃ¡rom rejtett adattagja:
 
-atm: ATM típusú (a szimulációban egyetlen automata szerepel)
+atm: ATM tÃ­pusÃº (a szimulÃ¡ciÃ³ban egyetlen automata szerepel)
 
-customers: olyan adatszerkezet, amiben Customer típusú objektumokat lehet tárolni (ez lehet például tömb, ArrayList vagy LinkedList; tömb esetén felhasználhatjuk, hogy maximum 50 felhasználó lehet a szimulációban)
+customers: olyan adatszerkezet, amiben Customer tÃ­pusÃº objektumokat lehet tÃ¡rolni (ez lehet pÃ©ldÃ¡ul tÃ¶mb, ArrayList vagy LinkedList; tÃ¶mb esetÃ©n felhasznÃ¡lhatjuk, hogy maximum 50 felhasznÃ¡lÃ³ lehet a szimulÃ¡ciÃ³ban)
 
-pwLog: PrintWriter típusú objektum, amelyet logfájl vezetéséhez használunk
+pwLog: PrintWriter tÃ­pusÃº objektum, amelyet logfÃ¡jl vezetÃ©sÃ©hez hasznÃ¡lunk
 
-Készítsük el a következõ metódusokat:
+KÃ©szÃ­tsÃ¼k el a kÃ¶vetkezÅ‘ metÃ³dusokat:
 
-Az osztálynak legyen egy publikus konstruktora: Simulator(String bankName, int initAmount, String outputFileName)
+Az osztÃ¡lynak legyen egy publikus konstruktora: Simulator(String bankName, int initAmount, String outputFileName)
 
-Ha a paraméterek megfelelõek (lásd a makeATM metódusnál írtakat), akkor a konstruktor a hozza létre a megadott bankhoz tartozó automatát a megadott kezdeti összeggel. Ha az adatok nem megfelelõek, akkor a metódus dobjon IllegalArgumentException kivételt.
-(segítség: egy ATM objektum paramétereinek ellenõrzésére és helyes paraméterek esetén létrehozására már van megfelelõ metódus az ATM osztályban, így kód-duplikáció helyett azt kell meghívni)
+Ha a paramÃ©terek megfelelÅ‘ek (lÃ¡sd a makeATM metÃ³dusnÃ¡l Ã­rtakat), akkor a konstruktor a hozza lÃ©tre a megadott bankhoz tartozÃ³ automatÃ¡t a megadott kezdeti Ã¶sszeggel. Ha az adatok nem megfelelÅ‘ek, akkor a metÃ³dus dobjon IllegalArgumentException kivÃ©telt.
+(segÃ­tsÃ©g: egy ATM objektum paramÃ©tereinek ellenÅ‘rzÃ©sÃ©re Ã©s helyes paramÃ©terek esetÃ©n lÃ©trehozÃ¡sÃ¡ra mÃ¡r van megfelelÅ‘ metÃ³dus az ATM osztÃ¡lyban, Ã­gy kÃ³d-duplikÃ¡ciÃ³ helyett azt kell meghÃ­vni)
 
-A Customer objektumokat tartalmazó adatszerkezet kezdetben ne tartalmazzon egyetlen objektumot sem.
+A Customer objektumokat tartalmazÃ³ adatszerkezet kezdetben ne tartalmazzon egyetlen objektumot sem.
 
-A PrintWriter objektumot hozzuk létre a megadott fájlnévhez (ha a fájl nem hozható létre, vagy nem nyitható meg íráshoz, akkor a metódus engedje ki a keletkezõ kivételt).
+A PrintWriter objektumot hozzuk lÃ©tre a megadott fÃ¡jlnÃ©vhez (ha a fÃ¡jl nem hozhatÃ³ lÃ©tre, vagy nem nyithatÃ³ meg Ã­rÃ¡shoz, akkor a metÃ³dus engedje ki a keletkezÅ‘ kivÃ©telt).
 
-Legyen egy rejtett Customer visszatérési értékû szöveges paraméterû getCustomerByName metódus, amely visszaadja a customers adatszerkezetbõl annak a Customer objektumnak a referenciáját, amelynek a neve megegyezik a paraméterben megadott szöveggel. Feltételezhetjük, hogy egy név csak egyszer szerepel (ezt az insertCustomer metódus fogja biztosítani). Ha az adatszerkezetben nincs megfelelõ objektum, akkor a metódus adjon vissza null referenciát.
-Az objektumot nem kell lemásolni, csak a referenciáját kell visszaadni.
+Legyen egy rejtett Customer visszatÃ©rÃ©si Ã©rtÃ©kÅ± szÃ¶veges paramÃ©terÅ± getCustomerByName metÃ³dus, amely visszaadja a customers adatszerkezetbÅ‘l annak a Customer objektumnak a referenciÃ¡jÃ¡t, amelynek a neve megegyezik a paramÃ©terben megadott szÃ¶veggel. FeltÃ©telezhetjÃ¼k, hogy egy nÃ©v csak egyszer szerepel (ezt az insertCustomer metÃ³dus fogja biztosÃ­tani). Ha az adatszerkezetben nincs megfelelÅ‘ objektum, akkor a metÃ³dus adjon vissza null referenciÃ¡t.
+Az objektumot nem kell lemÃ¡solni, csak a referenciÃ¡jÃ¡t kell visszaadni.
 
-Legyen egy publikus void visszatérési értékû insertCustomer(String customerName, int birthYear, String bankName) metódus, amellyel egy Customer objektumot lehet felvinni a nyilvántartásba. A személy akkor vehetõ fel, ha ilyen nevû még nem szerepel az adatszerkezetben, továbbá ha a személy adatai megfelelõek (lásd a makeCustomer metódusnál írtakat). Ha a személy már szerepel a nyilvántartásban, vagy valamelyik paraméter nem megfelelõ, akkor a Customer objektumokat tároló adatszerkezet maradjon változatlan.
-(segítség: használd a makeCustomer és getCustomerByName metódusokat)
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ± insertCustomer(String customerName, int birthYear, String bankName) metÃ³dus, amellyel egy Customer objektumot lehet felvinni a nyilvÃ¡ntartÃ¡sba. A szemÃ©ly akkor vehetÅ‘ fel, ha ilyen nevÅ± mÃ©g nem szerepel az adatszerkezetben, tovÃ¡bbÃ¡ ha a szemÃ©ly adatai megfelelÅ‘ek (lÃ¡sd a makeCustomer metÃ³dusnÃ¡l Ã­rtakat). Ha a szemÃ©ly mÃ¡r szerepel a nyilvÃ¡ntartÃ¡sban, vagy valamelyik paramÃ©ter nem megfelelÅ‘, akkor a Customer objektumokat tÃ¡rolÃ³ adatszerkezet maradjon vÃ¡ltozatlan.
+(segÃ­tsÃ©g: hasznÃ¡ld a makeCustomer Ã©s getCustomerByName metÃ³dusokat)
 
-Legyen egy publikus void visszatérési értékû withdrawCash(String customerName, int amount) metódus, amellyel készpénzt lehet felvenni az automatából.
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ± withdrawCash(String customerName, int amount) metÃ³dus, amellyel kÃ©szpÃ©nzt lehet felvenni az automatÃ¡bÃ³l.
 
-Ha ilyen nevû személy nem szerepel a nyilvántartásban (használd a getCustomerByName metódust), vagy ha az automatában nincs elég készpénz, vagy a felvenni kívánt összeg 0 vagy negatív, akkor a metódus nem csinál semmit.
+Ha ilyen nevÅ± szemÃ©ly nem szerepel a nyilvÃ¡ntartÃ¡sban (hasznÃ¡ld a getCustomerByName metÃ³dust), vagy ha az automatÃ¡ban nincs elÃ©g kÃ©szpÃ©nz, vagy a felvenni kÃ­vÃ¡nt Ã¶sszeg 0 vagy negatÃ­v, akkor a metÃ³dus nem csinÃ¡l semmit.
 
-Ha ilyen nevû személy szerepel a megfelelõ adatszerkezetben és az automatában is van elég pénz, akkor a metódus kiszámítja a pénzfelvétel díját, majd ellenõrzi, hogy az adott személy folyószámláján van-e legalább akkora fedezet, mint amennyi a felvenni kívánt összeg és a pénzfelvételi díj együttesen. Ha a személy egyenlege nem elég nagy, akkor a metódus nem csinál semmit.
+Ha ilyen nevÅ± szemÃ©ly szerepel a megfelelÅ‘ adatszerkezetben Ã©s az automatÃ¡ban is van elÃ©g pÃ©nz, akkor a metÃ³dus kiszÃ¡mÃ­tja a pÃ©nzfelvÃ©tel dÃ­jÃ¡t, majd ellenÅ‘rzi, hogy az adott szemÃ©ly folyÃ³szÃ¡mlÃ¡jÃ¡n van-e legalÃ¡bb akkora fedezet, mint amennyi a felvenni kÃ­vÃ¡nt Ã¶sszeg Ã©s a pÃ©nzfelvÃ©teli dÃ­j egyÃ¼ttesen. Ha a szemÃ©ly egyenlege nem elÃ©g nagy, akkor a metÃ³dus nem csinÃ¡l semmit.
 
-Ha minden ellenõrzés sikeres, akkor a metódus az adott személy folyószámlájának egyenlegét az összeggel és a készpénzfelvételi díjjal csökkenti (mert a személynek a felvétel díját is meg kell fizetnie), az automatában lévõ pénzösszeget viszont csak a felvenni kívánt összeggel csökkenti (mert az automata ténylegesen csak annyit ad ki).
+Ha minden ellenÅ‘rzÃ©s sikeres, akkor a metÃ³dus az adott szemÃ©ly folyÃ³szÃ¡mlÃ¡jÃ¡nak egyenlegÃ©t az Ã¶sszeggel Ã©s a kÃ©szpÃ©nzfelvÃ©teli dÃ­jjal csÃ¶kkenti (mert a szemÃ©lynek a felvÃ©tel dÃ­jÃ¡t is meg kell fizetnie), az automatÃ¡ban lÃ©vÅ‘ pÃ©nzÃ¶sszeget viszont csak a felvenni kÃ­vÃ¡nt Ã¶sszeggel csÃ¶kkenti (mert az automata tÃ©nylegesen csak annyit ad ki).
 
-Ha történt készpénzfelvétel, akkor a metódus a logfájlba írja ki a felvevõ szöveges reprezentációját. Ha nem történt készpénzfelvétel, akkor semmit se írjon a logfájlba.
+Ha tÃ¶rtÃ©nt kÃ©szpÃ©nzfelvÃ©tel, akkor a metÃ³dus a logfÃ¡jlba Ã­rja ki a felvevÅ‘ szÃ¶veges reprezentÃ¡ciÃ³jÃ¡t. Ha nem tÃ¶rtÃ©nt kÃ©szpÃ©nzfelvÃ©tel, akkor semmit se Ã­rjon a logfÃ¡jlba.
 
-Legyen egy publikus void visszatérési értékû depositCash(String customerName, int amount) metódus, amellyel pénzt lehet betenni az automatába. Ha ilyen nevû személy nem szerepel a nyilvántartásban, vagy az összeg 0 vagy negatív, akkor a metódus ne csináljon semmit. Ellenkezõ esetben mind az automatában lévõ pénzösszeget, mind az adott személy folyószámláján lévõ egyenleget növelje meg az adott értékkel (a pénz betételének nincs díja). Ha történt készpénz betét, akkor a metódus a logfájlba írja ki a betevõ személy szöveges reprezentációját. Ellenkezõ esetben semmit se írjon a logfájlba.
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ± depositCash(String customerName, int amount) metÃ³dus, amellyel pÃ©nzt lehet betenni az automatÃ¡ba. Ha ilyen nevÅ± szemÃ©ly nem szerepel a nyilvÃ¡ntartÃ¡sban, vagy az Ã¶sszeg 0 vagy negatÃ­v, akkor a metÃ³dus ne csinÃ¡ljon semmit. EllenkezÅ‘ esetben mind az automatÃ¡ban lÃ©vÅ‘ pÃ©nzÃ¶sszeget, mind az adott szemÃ©ly folyÃ³szÃ¡mlÃ¡jÃ¡n lÃ©vÅ‘ egyenleget nÃ¶velje meg az adott Ã©rtÃ©kkel (a pÃ©nz betÃ©telÃ©nek nincs dÃ­ja). Ha tÃ¶rtÃ©nt kÃ©szpÃ©nz betÃ©t, akkor a metÃ³dus a logfÃ¡jlba Ã­rja ki a betevÅ‘ szemÃ©ly szÃ¶veges reprezentÃ¡ciÃ³jÃ¡t. EllenkezÅ‘ esetben semmit se Ã­rjon a logfÃ¡jlba.
 
-Legyen egy publikus void visszatérési értékû simulate(String inputFileName) metódus, amely a megadott nevû inputfájl alapján szimulációt hajt végre a bank-világban.
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ± simulate(String inputFileName) metÃ³dus, amely a megadott nevÅ± inputfÃ¡jl alapjÃ¡n szimulÃ¡ciÃ³t hajt vÃ©gre a bank-vilÃ¡gban.
 
-A metódus nyissa meg olvasásra a megadott inputfájlt (ha a fájl nem létezik, vagy nem nyitható meg olvasáshoz, akkor a metódus engedje ki a keletkezõ kivételt).
+A metÃ³dus nyissa meg olvasÃ¡sra a megadott inputfÃ¡jlt (ha a fÃ¡jl nem lÃ©tezik, vagy nem nyithatÃ³ meg olvasÃ¡shoz, akkor a metÃ³dus engedje ki a keletkezÅ‘ kivÃ©telt).
 
-Ha sikerült megnyitni a fájlt, akkor a metódus feladata, hogy azt feldolgozza.
+Ha sikerÃ¼lt megnyitni a fÃ¡jlt, akkor a metÃ³dus feladata, hogy azt feldolgozza.
 
-Az inputfájl minden sora egy mûveletet tartalmaz.
+Az inputfÃ¡jl minden sora egy mÅ±veletet tartalmaz.
 
-A mûvelet két részbõl áll, a részeket kettõspont választja el egymástól.
+A mÅ±velet kÃ©t rÃ©szbÅ‘l Ã¡ll, a rÃ©szeket kettÅ‘spont vÃ¡lasztja el egymÃ¡stÃ³l.
 
-A mûvelet elsõ része 3 értéket vehet fel:
+A mÅ±velet elsÅ‘ rÃ©sze 3 Ã©rtÃ©ket vehet fel:
 
-REG: ebben az esetben a mûvelet egy személy felvétele a nyilvántartásba. Ekkor a mûvelet második fele a személy adatait tartalmazza vesszõvel elválasztva: név,születésiév,banknév sorrendben. Ha a személy adatai megfelelõek, és még nem szerepel a nyilvántartásban, akkor vegyük fel.
-(segítség: az ellenõrzéshez és a felvitelhez használd az insertCustomer metódust)
+REG: ebben az esetben a mÅ±velet egy szemÃ©ly felvÃ©tele a nyilvÃ¡ntartÃ¡sba. Ekkor a mÅ±velet mÃ¡sodik fele a szemÃ©ly adatait tartalmazza vesszÅ‘vel elvÃ¡lasztva: nÃ©v,szÃ¼letÃ©siÃ©v,banknÃ©v sorrendben. Ha a szemÃ©ly adatai megfelelÅ‘ek, Ã©s mÃ©g nem szerepel a nyilvÃ¡ntartÃ¡sban, akkor vegyÃ¼k fel.
+(segÃ­tsÃ©g: az ellenÅ‘rzÃ©shez Ã©s a felvitelhez hasznÃ¡ld az insertCustomer metÃ³dust)
 
-GET: ebben az esetben a mûvelet a készpénzfelvétel. A mûvelet második része a felvevõ nevét és a felvenni kívánt összeget tartalmazza vesszõvel elválasztva. Ha az adatok megfelelõek, akkor történjen meg a készpénz felvétel.
-(segítség: használd a withdrawCash metódust)
+GET: ebben az esetben a mÅ±velet a kÃ©szpÃ©nzfelvÃ©tel. A mÅ±velet mÃ¡sodik rÃ©sze a felvevÅ‘ nevÃ©t Ã©s a felvenni kÃ­vÃ¡nt Ã¶sszeget tartalmazza vesszÅ‘vel elvÃ¡lasztva. Ha az adatok megfelelÅ‘ek, akkor tÃ¶rtÃ©njen meg a kÃ©szpÃ©nz felvÃ©tel.
+(segÃ­tsÃ©g: hasznÃ¡ld a withdrawCash metÃ³dust)
 
-PUT: ebben az esetben a mûvelet a készpénz betétele az automatába. Ekkor a mûvelet második része a betevõ személy nevét és a betenni kívánt összeget tartalmazza vesszõvel elválasztva. Ha az adatok megfelelõek, akkor történjen meg a készpénz betétel.
-(segítség: használd a depositCash metódust)
+PUT: ebben az esetben a mÅ±velet a kÃ©szpÃ©nz betÃ©tele az automatÃ¡ba. Ekkor a mÅ±velet mÃ¡sodik rÃ©sze a betevÅ‘ szemÃ©ly nevÃ©t Ã©s a betenni kÃ­vÃ¡nt Ã¶sszeget tartalmazza vesszÅ‘vel elvÃ¡lasztva. Ha az adatok megfelelÅ‘ek, akkor tÃ¶rtÃ©njen meg a kÃ©szpÃ©nz betÃ©tel.
+(segÃ­tsÃ©g: hasznÃ¡ld a depositCash metÃ³dust)
 
-Ha bármelyik input-sor hibás, tehát nem a megfelelõ tartalmú és/vagy mennyiségû adatot tartalmazza, akkor a sort figyelmen kívül kell hagyni, és a feldolgozás folytatódjon a következõ sorral. Rossz lehet például az a sor, amelyik nem pontosan egy kettõspontot tartalmaz, vagy aminél a kettõspont elõtt nem a három megadott parancs egyike szerepel, vagy amelyik nem számot tartalmaz ott, ahol számot várunk, vagy ahol nincs meg az összes szükséges adat (például a felvételnél hiányzik az összeg), stb.
+Ha bÃ¡rmelyik input-sor hibÃ¡s, tehÃ¡t nem a megfelelÅ‘ tartalmÃº Ã©s/vagy mennyisÃ©gÅ± adatot tartalmazza, akkor a sort figyelmen kÃ­vÃ¼l kell hagyni, Ã©s a feldolgozÃ¡s folytatÃ³djon a kÃ¶vetkezÅ‘ sorral. Rossz lehet pÃ©ldÃ¡ul az a sor, amelyik nem pontosan egy kettÅ‘spontot tartalmaz, vagy aminÃ©l a kettÅ‘spont elÅ‘tt nem a hÃ¡rom megadott parancs egyike szerepel, vagy amelyik nem szÃ¡mot tartalmaz ott, ahol szÃ¡mot vÃ¡runk, vagy ahol nincs meg az Ã¶sszes szÃ¼ksÃ©ges adat (pÃ©ldÃ¡ul a felvÃ©telnÃ©l hiÃ¡nyzik az Ã¶sszeg), stb.
 
-Ha az inputfájl feldolgozása során olvasási hiba történik, akkor a metódus engedje ki a keletkezõ kivételt.
+Ha az inputfÃ¡jl feldolgozÃ¡sa sorÃ¡n olvasÃ¡si hiba tÃ¶rtÃ©nik, akkor a metÃ³dus engedje ki a keletkezÅ‘ kivÃ©telt.
 
-Legyen egy publikus void visszatérési értékû, paraméter nélküli close metódus, amely lezárja a logfájlhoz létrehozott PrintWriter objektumot.
+Legyen egy publikus void visszatÃ©rÃ©si Ã©rtÃ©kÅ±, paramÃ©ter nÃ©lkÃ¼li close metÃ³dus, amely lezÃ¡rja a logfÃ¡jlhoz lÃ©trehozott PrintWriter objektumot.
 
 main.Main
-Az eddigi osztályokból most már össze tudunk állítani egy parancssorból is önállóan futtatható programot, amely a parancssori paramétereknek megfelelõen elkészíti a szimuláció kezdeti világát, majd egy megadott inputfájlnak megfelelõen végrehajtja a szimulációt. Az eredményeket egy megadott outputfájlba menti.
+Az eddigi osztÃ¡lyokbÃ³l most mÃ¡r Ã¶ssze tudunk Ã¡llÃ­tani egy parancssorbÃ³l is Ã¶nÃ¡llÃ³an futtathatÃ³ programot, amely a parancssori paramÃ©tereknek megfelelÅ‘en elkÃ©szÃ­ti a szimulÃ¡ciÃ³ kezdeti vilÃ¡gÃ¡t, majd egy megadott inputfÃ¡jlnak megfelelÅ‘en vÃ©grehajtja a szimulÃ¡ciÃ³t. Az eredmÃ©nyeket egy megadott outputfÃ¡jlba menti.
 
-Hozzuk létre a main csomagban a Main osztályt, amelyben legyen egy fõprogram! A következõképpen kell viselkednie:
+Hozzuk lÃ©tre a main csomagban a Main osztÃ¡lyt, amelyben legyen egy fÅ‘program! A kÃ¶vetkezÅ‘kÃ©ppen kell viselkednie:
 
-A fõprogram három paramétert vár: banknév inputfájl outputfájl
+A fÅ‘program hÃ¡rom paramÃ©tert vÃ¡r: banknÃ©v inputfÃ¡jl outputfÃ¡jl
 
-Ha nincs megfelelõ számú paraméter, akkor írjon ki egy hibaüzenetet és fejezõdjön be.
+Ha nincs megfelelÅ‘ szÃ¡mÃº paramÃ©ter, akkor Ã­rjon ki egy hibaÃ¼zenetet Ã©s fejezÅ‘djÃ¶n be.
 
-Ha három paramétert kapott, akkor a banknévvel, 1 000 000 Ft kezdeti egyenleggel és az outputfájl nevével hozza létre a Simulator objektumot. Ha létrehozáskor kivétel keletkezett, akkor a program egy megfelelõ hibaüzenet kiírása után szabályosan fejezõdön be.
+Ha hÃ¡rom paramÃ©tert kapott, akkor a banknÃ©vvel, 1 000 000 Ft kezdeti egyenleggel Ã©s az outputfÃ¡jl nevÃ©vel hozza lÃ©tre a Simulator objektumot. Ha lÃ©trehozÃ¡skor kivÃ©tel keletkezett, akkor a program egy megfelelÅ‘ hibaÃ¼zenet kiÃ­rÃ¡sa utÃ¡n szabÃ¡lyosan fejezÅ‘dÃ¶n be.
 
-Ha létrejött a Simulator objektum, akkor hívja meg annak simulate metódusát (átadva neki az inputfájlt). Végül hívja meg az objektum close metódusát.
-Ha a metódusok végrehajtása során kivétel keletkezik, akkor a program egy megfelelõ hibaüzenet kiírása után szabályosan fejezõdön be.
+Ha lÃ©trejÃ¶tt a Simulator objektum, akkor hÃ­vja meg annak simulate metÃ³dusÃ¡t (Ã¡tadva neki az inputfÃ¡jlt). VÃ©gÃ¼l hÃ­vja meg az objektum close metÃ³dusÃ¡t.
+Ha a metÃ³dusok vÃ©grehajtÃ¡sa sorÃ¡n kivÃ©tel keletkezik, akkor a program egy megfelelÅ‘ hibaÃ¼zenet kiÃ­rÃ¡sa utÃ¡n szabÃ¡lyosan fejezÅ‘dÃ¶n be.
 
-Tesztelés
-A feladathoz tartozó letölthetõ segédlet-ben található input.txt-t másoljuk a megfelelõ helyre. Fordítsuk le a programot és indítsuk el a következõ paraméterezéssel:
+TesztelÃ©s
+A feladathoz tartozÃ³ letÃ¶lthetÅ‘ segÃ©dlet-ben talÃ¡lhatÃ³ input.txt-t mÃ¡soljuk a megfelelÅ‘ helyre. FordÃ­tsuk le a programot Ã©s indÃ­tsuk el a kÃ¶vetkezÅ‘ paramÃ©terezÃ©ssel:
 java main.Main BB input.txt output.txt
 
-Ezután a keletkezõ output.txt fájlt vessük össze a becsomagolt állományban lévõvel, hogy lássuk, hogy a várt eredmény jött-e ki.
+EzutÃ¡n a keletkezÅ‘ output.txt fÃ¡jlt vessÃ¼k Ã¶ssze a becsomagolt Ã¡llomÃ¡nyban lÃ©vÅ‘vel, hogy lÃ¡ssuk, hogy a vÃ¡rt eredmÃ©ny jÃ¶tt-e ki.
 
-A tömörített állományban található magyarazat.txt nevû fájl is, ami az input.txt sorait tartalmazza magyarázatokkal kiegészítve: minden sornál szerepel a program elvárt viselkedése.
+A tÃ¶mÃ¶rÃ­tett Ã¡llomÃ¡nyban talÃ¡lhatÃ³ magyarazat.txt nevÅ± fÃ¡jl is, ami az input.txt sorait tartalmazza magyarÃ¡zatokkal kiegÃ©szÃ­tve: minden sornÃ¡l szerepel a program elvÃ¡rt viselkedÃ©se.
 
-Figyelem: a helyes kimeneti fájl még nem feltétlenül jelenti azt, hogy a megoldás helyes.
+Figyelem: a helyes kimeneti fÃ¡jl mÃ©g nem feltÃ©tlenÃ¼l jelenti azt, hogy a megoldÃ¡s helyes.
 
-Jó munkát!
+JÃ³ munkÃ¡t!
