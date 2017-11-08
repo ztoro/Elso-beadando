@@ -1,7 +1,7 @@
 package financial.person;
 
+import utils.Utils;
 import financial.bank.Bank;
-import main.Main;
 
 public class Customer {
 	
@@ -20,7 +20,7 @@ public class Customer {
 	public static Customer makeCustomer(String name, int birthYear, String bankName) {
 		
 		Bank bank;
-		if (Main.failBirthYear(birthYear) || Main.failBankName(bankName) || Main.failName(name)) {
+		if (Utils.failBirthYear(birthYear) || Utils.failBankName(bankName) || Utils.failName(name)) {
 			return null;
 		}
 		

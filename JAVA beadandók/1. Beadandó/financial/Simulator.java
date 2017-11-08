@@ -41,9 +41,9 @@ public class Simulator {
     }
 	
 	public void withdrawCash(String customerName, int amount) {
-		if (atm.getAmount() >= amount && amount > 0 && getCustomerByName(customerName) != null) {
+		Customer customer = getCustomerByName(customerName);
+		if (atm.getAmount() >= amount && amount > 0 && customer != null) {
 			int fee;
-			Customer customer = getCustomerByName(customerName);
 			fee = atm.calculateFee(customer.getBank(), amount);
 			if (customer.getAmount() >= fee+amount) {
 					customer.decreaseAmount(fee+amount);
@@ -54,8 +54,8 @@ public class Simulator {
 	}
     
     public void depositCash(String customerName, int amount) {
-        if (amount > 0 && getCustomerByName(customerName) != null) {
-            Customer customer = getCustomerByName(customerName);
+    	Customer customer = getCustomerByName(customerName);
+        if (amount > 0 && customer != null) {
             customer.increaseAmount(amount);
             atm.increaseAmount(amount);
             pwLog.println(customer);

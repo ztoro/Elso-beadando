@@ -1,7 +1,7 @@
 package financial.bank;
 
 import financial.person.Customer;
-import main.Main;
+import utils.Utils;
 
 public class ATM {
 	
@@ -16,7 +16,7 @@ public class ATM {
 	}
 	
 	public static ATM makeATM(String bankName,int amount) {
-		if (0 > amount || Main.failBankName(bankName)) {
+		if (0 > amount || Utils.failBankName(bankName)) {
 			return null;
 		} else {
 			Bank bankValue = Bank.valueOf(bankName);
