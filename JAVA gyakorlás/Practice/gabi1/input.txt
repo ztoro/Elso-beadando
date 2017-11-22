@@ -1,0 +1,20 @@
+Game:Activision;Call of Duty - Infinite Warfare;XBOX;10
+Game:Activision;Call of Duty - Infinite Warfare;PC;10
+Game:Square Enix;Final Fantasy XV;PC;15
+Game:Square Enix;Final Fantasy XV;PS;10
+Game:Activision;Call of Duty - Black Ops III;PC;7
+Game:Activision;Call of Duty - Black Ops III;PS;5
+Game:Rockstar Games;Grand Theft Auto V;PS;5
+Game:Rockstar Games;Grand Theft Auto V;PC;5
+Game:Rockstar Games;Grand Theft Auto V;XBOX;5
+Sell:Grand Theft Auto V;XBOX;1
+Sell:Grand Theft Auto V;PS;3
+Sell:Grand Theft Auto V;PC;2
+Game:Activision;Call of Duty - Infinite Warfare;PS;8
+Sell:Call of Duty - Infinite Warfare;PS;1
+Sell:Call of Duty - Infinite Warfare;PC;3
+Sell:Final Fantasy XV;PC;15
+Game:Activision;Call of Duty - Black Ops III;XBOX;9
+Sell:Final Fantasy XV;PC;15
+Sell:Call of Duty - Black Ops III;XBOX;3
+Sell:Call of Duty - Black Ops III;XBOX;2
