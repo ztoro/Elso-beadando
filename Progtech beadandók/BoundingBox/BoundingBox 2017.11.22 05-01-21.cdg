@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BoundingBox">
+  <ClassDiagramComponents>
+    <Class name="Square" package="shape" visibility="public" xPosition="260.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="side"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculateBBArea" returnType="double" visibility="private" isStatic="true">
+          <Argument type="int" name="side"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Triangle" package="shape" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="side"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculateBBArea" returnType="double" visibility="private" isStatic="true">
+          <Argument type="int" name="side"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hexagon" package="shape" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="side"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculateBBArea" returnType="double" visibility="private" isStatic="true">
+          <Argument type="int" name="side"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Circle" package="shape" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="radius"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculateBBArea" returnType="double" visibility="private" isStatic="true">
+          <Argument type="int" name="radius"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Shape" package="shape" visibility="public" xPosition="1198.0" yPosition="285.0">
+      <Fields>
+        <Field name="symbol" type="Symbols" visibility="private"/>
+        <Field name="x" type="int" visibility="private"/>
+        <Field name="size" type="int" visibility="private"/>
+        <Field name="boundingBoxArea" type="double" visibility="private"/>
+        <Field name="index" type="int" visibility="private" isStatic="true"/>
+        <Field name="maxIndex" type="int" visibility="private" isStatic="true"/>
+        <Field name="maxArea" type="double" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="size"/>
+          <Argument type="double" name="boundingBoxArea"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSize" returnType="int" visibility="public"/>
+        <Method name="getMaxIndex" returnType="int" visibility="public" isStatic="true"/>
+        <Method name="getMaxArea" returnType="double" visibility="public" isStatic="true"/>
+        <Method name="setMaxArea" returnType="void" visibility="public">
+          <Argument type="double" name="max"/>
+        </Method>
+        <Method name="setMaxIndex" returnType="void" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="main" visibility="public" xPosition="1613.0" yPosition="285.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="fileName"/>
+        </Method>
+        <Method name="test" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Symbols" package="shape" visibility="public" xPosition="162.0" yPosition="366.0">
+      <Literals>
+        <Literal name="T"/>
+        <Literal name="S"/>
+        <Literal name="C"/>
+        <Literal name="H"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="shape.Square" target="shape.Shape"/>
+    <HasRelation name="symbol" source="shape.Shape" target="shape.Symbols" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="shape.Hexagon" target="shape.Shape"/>
+    <IsRelation name="is" source="shape.Circle" target="shape.Shape"/>
+    <IsRelation name="is" source="shape.Triangle" target="shape.Shape"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
